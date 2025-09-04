@@ -23,28 +23,28 @@
   />
   <body>
     <!-- navbar section -->
-    <nav class="flex justify-between items-center px-10 py-4">
+    <nav class="flex justify-between items-center px-5 md:px-10 py-4">
       <div class="logo flex items-center gap-2">
-        <img class="h-[60px]" src="./assets/logo.png" alt="" />
-        <h2 class="text-[#006747] font-extrabold text-2xl">
+        <img class="h-[35px] md:h-[60px]" src="./assets/logo.png" alt="" />
+        <h2 class="text-[#006747] font-extrabold md:text-2xl">
           Emergency<br />Service
         </h2>
       </div>
-      <div class="nav-btn flex gap-3 font-bold">
+      <div class="nav-btn flex max-sm:flex-col gap-3 md:font-bold">
         <p
-          class="bg-[#ecfff0] border-none rounded-3xl px-6 py-2 text-center flex items-center justify-center gap-2"
+          class="bg-[#ecfff0] border-none rounded-3xl px-2 md:px-6 py-2 text-center flex items-center justify-center gap-2"
         >
           <span id="heart-count">0</span>
           <img class="w-[20px]" src="./assets/heart.png" alt="" />
         </p>
         <p
-          class="bg-[#ecfff0] border-none rounded-3xl px-6 py-2 text-center flex items-center justify-center gap-2"
+          class="bg-[#ecfff0] border-none rounded-3xl px-2 md:px-6 py-2 text-center flex items-center justify-center gap-2"
         >
           <span id="coin-count">100</span>
           <img class="w-[20px]" src="./assets/coin.png" alt="" />
         </p>
         <p
-          class="bg-[#00A63E] text-white border-none rounded-3xl w-fit px-6 py-2 text-center flex items-center justify-center gap-2"
+          class="bg-[#00A63E] text-white border-none rounded-3xl w-fit px-2 md:px-6 py-2 text-center flex items-center justify-center gap-2"
         >
           <span id="copy-count">0</span> Copy
         </p>
@@ -62,8 +62,12 @@
       </p>
     </header>
     <!-- emergency-services section -->
-    <section class="emergency-call bg-[#f5fff6] grid grid-cols-4 gap-5 p-10">
-      <div class="emergency-call-cards grid grid-cols-3 gap-5 col-span-3">
+    <section
+      class="emergency-call bg-[#f5fff6] grid grid-cols-4 max-sm:grid-cols-2 gap-5 p-10"
+    >
+      <div
+        class="emergency-call-cards grid grid-cols-3 max-sm:grid-cols-1 gap-5 col-span-3"
+      >
         <div
           class="call-card p-5 flex flex-col gap-2 bg-white rounded-2xl shadow-lg"
         >
@@ -304,9 +308,9 @@
         </div>
       </div>
       <!-- call-history section-->
-      <div class="bg-white p-5 rounded-2xl shadow-lg h-full">
+      <div class="bg-white p-5 rounded-2xl shadow-lg h-full max-sm:col-span-2">
         <div class="flex items-center justify-between mb-3">
-          <h1 class="text-[20px] mb-3">
+          <h1 class="text-[15px] md:text-[20px] mb-3">
             <i class="fa-solid fa-clock-rotate-left"></i>
             Call History
           </h1>
