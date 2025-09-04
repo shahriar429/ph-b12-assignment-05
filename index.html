@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Emergency-Hotline-BD</title>
   </head>
   <!-- daisyui cdn -->
   <link
@@ -94,7 +94,7 @@
           class="call-card p-5 flex flex-col gap-2 bg-white rounded-2xl shadow-lg"
         >
           <div class="flex justify-between">
-            <div class="bg-[#FFE3E2] p-2 rounded">
+            <div class="bg-[#DFEFFF] p-2 rounded">
               <img class="w-[30px]" src="./assets/police.png" alt="" />
             </div>
             <i class="fa-regular fa-heart fa-2x favourite-number"></i>
@@ -305,17 +305,19 @@
       </div>
       <!-- call-history section-->
       <div class="bg-white p-5 rounded-2xl shadow-lg h-full">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between mb-3">
           <h1 class="text-[20px] mb-3">
             <i class="fa-solid fa-clock-rotate-left"></i>
             Call History
           </h1>
           <button
+            id="clear-btn"
             class="btn bg-[#00A63E] text-white border-none rounded-3xl px-6"
           >
             Clear
           </button>
         </div>
+        <div id="history-container"></div>
       </div>
     </section>
     <script src="./index.js"></script>

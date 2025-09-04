@@ -20,6 +20,8 @@ document.querySelectorAll(".copy-btn").forEach(function(el) {
     });
 });
 
+const historyData = [];
+
 // call-number functionality
 document.querySelectorAll(".call-btn").forEach(function(el) {
     el.addEventListener("click", function() {
@@ -32,6 +34,31 @@ document.querySelectorAll(".call-btn").forEach(function(el) {
             alert(`Calling- ${hotlineNumber} ---(${hotlineName})`);
             coinCount-=20;
             document.getElementById("coin-count").innerText = coinCount;
+
+            const historyContainer = document.getElementById("history-container");
+            const data = {
+                name: hotlineName,
+                number: hotlineNumber,
+                date: new Date().toLocaleTimeString()
+            };
+            historyData.push(data);
+            historyContainer.innerText = "";
+            for(const data of historyData){
+                const div = document.createElement("div");
+                div.innerHTML = `
+                        <div class="flex justify-between items-center bg-gray-100 rounded-2xl p-3 mb-3">
+                            <div>
+                                <h1 class="font-bold">${data.name}</h1>
+                                <p>${data.number}</p>
+                            </div>
+                            <p>${data.date}</p>
+                        </div>
+                        `
+                    historyContainer.appendChild(div);
+            }
+            document.getElementById("clear-btn").addEventListener("click", function(){
+                historyContainer.innerText = "";
+            })
         } else{
             alert("Insufficient coins");
             return;
